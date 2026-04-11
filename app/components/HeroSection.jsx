@@ -91,15 +91,15 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 lg:px-20 pt-24 md:pt-32"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 md:px-12 lg:px-20 pt-24 md:pt-32 bg-black"
     >
       {/* Animated gradient mesh background */}
       <motion.div
         animate={{
           background: [
-            "radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
-            "radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)",
+            "radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)",
+            "radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)",
+            "radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 50%)",
           ],
         }}
         transition={{
@@ -107,7 +107,7 @@ export default function HeroSection() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
+        className="absolute inset-0 bg-black"
       />
 
       {/* Content Grid */}
