@@ -44,7 +44,6 @@ export default function ServicesSection() {
         "Performance audit report",
         "Documentation and handoff guide",
       ],
-      timeline: "2-3 weeks",
       techStack: [
         { name: "React", icon: SiReact, color: "#61DAFB" },
         { name: "GSAP", icon: SiFramer, color: "#88CE02" },
@@ -68,7 +67,6 @@ export default function ServicesSection() {
         "SEO optimization included",
         "Analytics integration ready",
       ],
-      timeline: "1-2 weeks",
       techStack: [
         { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
         { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
@@ -92,7 +90,6 @@ export default function ServicesSection() {
         "Multi-chain support ready",
         "Gas optimization patterns",
       ],
-      timeline: "3-4 weeks",
       techStack: [
         { name: "React", icon: SiReact, color: "#61DAFB" },
         { name: "Ethereum", icon: SiEthereum, color: "#627EEA" },
@@ -367,16 +364,6 @@ export default function ServicesSection() {
                                   </li>
                                 ))}
                               </ul>
-                            </motion.div>
-
-                            {/* Timeline */}
-                            <motion.div variants={itemVariants}>
-                              <h4 className="text-sm font-semibold text-violet-400 uppercase tracking-wider mb-2">
-                                Timeline
-                              </h4>
-                              <p className="text-slate-300 font-medium">
-                                {service.timeline}
-                              </p>
                             </motion.div>
 
                             {/* Tech Stack */}

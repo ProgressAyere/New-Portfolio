@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Wallet, Layers } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function WhatIDo() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+
   // Container orchestrates staggered card entrance
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,6 +46,50 @@ export default function WhatIDo() {
         ease: "easeOut",
       },
     },
+  };
+
+  // Typewriter component
+  const TypewriterText = ({ text, isHovered }) => {
+    const [displayedText, setDisplayedText] = useState("");
+    const [isTypingComplete, setIsTypingComplete] = useState(false);
+
+    useEffect(() => {
+      if (isHovered) {
+        setDisplayedText("");
+        setIsTypingComplete(false);
+        let currentIndex = 0;
+        
+        const typingInterval = setInterval(() => {
+          if (currentIndex <= text.length) {
+            setDisplayedText(text.slice(0, currentIndex));
+            currentIndex++;
+          } else {
+            clearInterval(typingInterval);
+            setIsTypingComplete(true);
+          }
+        }, 50);
+
+        return () => clearInterval(typingInterval);
+      } else {
+        setDisplayedText("");
+        setIsTypingComplete(false);
+      }
+    }, [isHovered, text]);
+
+    if (!isHovered) return <div className="min-h-[4.5rem]"></div>;
+
+    return (
+      <p className="text-slate-400 leading-relaxed min-h-[4.5rem]">
+        {displayedText}
+        {!isTypingComplete && (
+          <motion.span
+            animate={{ opacity: [1, 0] }}
+            transition={{ duration: 0.5, repeat: Infinity }}
+            className="inline-block w-0.5 h-4 bg-emerald-400 ml-1"
+          />
+        )}
+      </p>
+    );
   };
 
   const cards = [
@@ -87,10 +134,7 @@ export default function WhatIDo() {
   return (
     <section
       id="what-i-do"
-      className="relative min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden"
-      style={{
-        background: "radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.05) 0%, #0a0a0f 50%)",
-      }}
+      className="relative min-h-screen py-24 md:py-32 px-6 md:px-12 lg:px-20 overflow-hidden bg-black"
     >
       {/* Noise texture overlay for premium feel */}
       <div
@@ -142,6 +186,8 @@ export default function WhatIDo() {
               variants={cardItemVariants}
               initial="rest"
               whileHover="hover"
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
               className="group relative"
             >
               {/* Glassmorphism card */}
@@ -190,7 +236,10 @@ export default function WhatIDo() {
 
                 {/* Positioning copy */}
                 <h3 className="text-2xl font-bold text-white mb-3">{card.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{card.description}</p>
+                <TypewriterText 
+                  text={card.description} 
+                  isHovered={hoveredCard === index}
+                />
 
                 {/* Hover indicator */}
                 <motion.a
