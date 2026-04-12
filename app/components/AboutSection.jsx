@@ -269,7 +269,7 @@ export default function AboutSection() {
             className="flex justify-center"
           >
             <motion.a
-              href="https://docs.google.com/viewer?url=https://your-domain.com/Progress-Ayere-CV.docx&embedded=true"
+              href="https://docs.google.com/viewer?url=https://progress-dev.vercel.app/Progress-Ayere-CV.docx&embedded=true"
               target="_blank"
               rel="noopener noreferrer"
               variants={buttonVariants}
