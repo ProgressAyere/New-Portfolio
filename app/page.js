@@ -11,6 +11,7 @@ import ServicesSection from "./components/ServicesSection";
 
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
+import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import CustomCursor from "./components/CustomCursor";
 import SplashScreen from "./components/SplashScreen";
 import { motion, AnimatePresence } from "framer-motion";
@@ -43,6 +44,7 @@ export default function Home() {
         <InfiniteReelStrip />
         <WhyWorkWithMe />
         <ServicesSection />
+        <TestimonialsCarousel />
         <AboutSection />
         <ContactSection />
       </motion.main>

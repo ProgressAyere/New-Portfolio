@@ -24,7 +24,7 @@ export default function ProjectsShowcase() {
       title: "BlockChain on Campus Platform",
       outcome: "Unified digital experience serving students across campuses",
       thumbnailSrc: "/bcc-home.png",
-      videoSrc: "/bcc-landscape video-mockup.mp4",
+      videoSrc: "/bcc-landscape-video-mockup.mp4",
       problem:
         "BlockChain on Campus at Yaba College of Technology, Epe had been quietly making impact in the Web3 space, hosting events, educating students, and building a community from the ground up. But none of it was visible online. No digital home, no proof of existence, no record of the work being done. For a campus already low on visibility, BCC was at risk of doing meaningful work that the world would never see,and that future students would never find.",
       solution:
@@ -47,7 +47,7 @@ export default function ProjectsShowcase() {
       title: "Ghonsi Proof",
       outcome: "Web3 portfolio verification platform with on-chain attestations",
       thumbnailSrc: "/ghonsi-home-mockup.png",
-      videoSrc: "/ghonsi-landscape video.mp4",
+      videoSrc: "/ghonsi-landscape-video.mp4",
       problem:
         "Developers struggle to prove their work across scattered platforms (GitHub, Discord, Twitter), making it hard for recruiters and clients to verify authentic contributions and skills.",
       solution:

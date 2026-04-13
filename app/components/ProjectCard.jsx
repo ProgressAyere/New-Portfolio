@@ -112,6 +112,7 @@ export default function ProjectCard({ project, index, onExpand, isExpanded }) {
                 muted
                 loop
                 playsInline
+                preload="none"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

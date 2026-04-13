@@ -51,6 +51,7 @@ export default function CaseStudyExpanded({ project, onClose }) {
           loop
           muted={isMuted}
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover"
         >
           <source src={project.videoSrc} type="video/mp4" />
