@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Progress Ayere | FrontEnd Developer Portfolio",
-  description: "A world-class portfolio showcasing cinematic UI/UX and performance-obsessed web development",
+  description: "Progress Ayere is a FrontEnd Developer specializing in React, Next.js, and modern web technologies. Explore my portfolio to see my projects, skills, and why I'm the right choice for your next web development project.",
   icons: {
     icon: '/my-nft.JPG',
   },

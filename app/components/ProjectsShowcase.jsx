@@ -59,10 +59,10 @@ export default function ProjectsShowcase() {
         { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
       ],
       results: [
-        "1,200+ verified developer portfolios",
-        "Integration with 5+ major Web3 protocols",
+        "45+ verified portfolios",
+        "Integration with a major Web3 protocols",
         "Zero-knowledge proof verification system",
-        "Featured in ETHGlobal showcase",
+        "Will be featured in SOL showcase",
       ],
       liveSiteUrl: "https://ghonsiproof.com",
     },
