@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Pages
+AGENTS.md
+CLAUDE.md
+package-lock.json
+VIDEO-OPTIMIZATION.md
+optimize-images.js
+optimize-media.js
+public-backup/
+restore-media.js
