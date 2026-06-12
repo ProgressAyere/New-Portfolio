@@ -1,0 +1,35 @@
+# Progress Ayere
+
+## Who I Am
+Progress Ayere is a Frontend Developer based in Lagos, Nigeria.
+
+## What I Do
+I specialize in building fast, interactive, and conversion-focused web experiences using React, Next.js, Tailwind CSS, and Web3 technologies. I also work with Framer Motion and GSAP for motion design systems.
+
+## Services
+- Web3 Frontend Development (Solana, blockchain-based platforms)
+- Landing Pages & Marketing Sites
+- Interactive Dashboards
+- Motion Design Systems
+- React & Next.js Application Development
+
+## Notable Projects
+- **Ghonsi Proof** (https://ghonsiproof.com) — Blockchain-based credential verification platform built on Solana. Frontend built with Next.js 15 App Router.
+- **Blockchain on Campus (BCC)** (https://bcc-yct.vercel.app) — A blockchain education community platform serving students across campuses in Nigeria.
+- **PCC Services** (https://pcc-services.vercel.app) — Portfolio and services website built for an architect client. Features project showcases, 3D design galleries, and construction project listings. Built with React and Tailwind CSS.
+
+## Tech Stack
+React, Next.js, TypeScript, Tailwind CSS, Framer Motion, GSAP, Solidity, Node.js, Supabase, SQL
+
+## Location
+Lagos, Nigeria. Available for remote work globally.
+
+## Availability
+Open for freelance and contract projects. Average response time: under 24 hours.
+
+## Contact & Links
+- Portfolio: https://progress-dev.vercel.app
+- LinkedIn: https://linkedin.com/in/progress-ayere-2b2a19271
+- GitHub: https://github.com/ProgressAyere
+- Twitter/X: https://x.com/MichaelAyere
+- Telegram: https://t.me/Progress_Ayere

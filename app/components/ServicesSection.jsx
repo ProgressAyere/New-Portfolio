@@ -55,7 +55,7 @@ export default function ServicesSection() {
       id: "landing",
       title: "High-Converting Landing Pages",
       description: "Pages that load fast, look premium, and drive conversions",
-      videoSrc: "/bcc-landscape video-mockup.mp4", // Replace with landing page demo
+      videoSrc: "/bcc-landscape-video-mockup.mp4", // Replace with landing page demo
       scope: [
         "Mobile-first responsive design",
         "Conversion-optimized layouts",

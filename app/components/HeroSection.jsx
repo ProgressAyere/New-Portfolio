@@ -231,7 +231,7 @@ export default function HeroSection() {
                   className="w-full h-full object-cover"
                 >
                   {/* Replace with actual project recording */}
-                  <source src="/bcc-landscape video-mockup.mp4" type="video/mp4" />
+                  <source src="/bcc-landscape-video-mockup.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
