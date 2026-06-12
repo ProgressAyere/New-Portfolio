@@ -44,6 +44,9 @@ export const metadata = {
   icons: {
     icon: "/my-nft.JPG",
   },
+  verification: {
+    google: "z1IugPlHzbgqPFLeMznZpeHhKEShcMp3jovoi3csoM8",
+  },
 };
 
 const personSchema = {
