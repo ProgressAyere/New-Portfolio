@@ -42,7 +42,7 @@ export const metadata = {
     creator: "@MichaelAyere",
   },
   icons: {
-    icon: "/my-nft.JPG",
+    icon: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981009/my-nft.jpg",
   },
   verification: {
     google: "z1IugPlHzbgqPFLeMznZpeHhKEShcMp3jovoi3csoM8",

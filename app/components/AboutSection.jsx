@@ -181,7 +181,7 @@ export default function AboutSection() {
                 className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-emerald-400/30"
               >
                 <img
-                  src="/profile-image.png"
+                  src="https://res.cloudinary.com/zwnns6ok/image/upload/v1791981014/profile-image.png"
                   alt="Developer"
                   className="w-full h-full object-cover"
                 />

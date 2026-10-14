@@ -23,8 +23,8 @@ export default function ProjectsShowcase() {
     {
       title: "BlockChain on Campus Platform",
       outcome: "Unified digital experience serving students across campuses",
-      thumbnailSrc: "/bcc-home.png",
-      videoSrc: "/bcc-landscape-video-mockup.mp4",
+      thumbnailSrc: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980983/bcc-home.png",
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980997/bcc-landscape-video-mockup.mp4",
       problem:
         "BlockChain on Campus at Yaba College of Technology, Epe had been quietly making impact in the Web3 space, hosting events, educating students, and building a community from the ground up. But none of it was visible online. No digital home, no proof of existence, no record of the work being done. For a campus already low on visibility, BCC was at risk of doing meaningful work that the world would never see,and that future students would never find.",
       solution:
@@ -46,8 +46,8 @@ export default function ProjectsShowcase() {
     {
       title: "Ghonsi Proof",
       outcome: "Web3 portfolio verification platform with on-chain attestations",
-      thumbnailSrc: "/ghonsi-home-mockup.png",
-      videoSrc: "/ghonsi-landscape-video.mp4",
+      thumbnailSrc: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980995/ghonsi-home-mockup.png",
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980995/ghonsi-landscape-video.mp4",
       problem:
         "Developers struggle to prove their work across scattered platforms (GitHub, Discord, Twitter), making it hard for recruiters and clients to verify authentic contributions and skills.",
       solution:
@@ -69,8 +69,8 @@ export default function ProjectsShowcase() {
     {
       title: "Interactive Dashboard System",
       outcome: "Phone repair platform that links customers, engineers, and dispatch riders in one seamless flow",
-      thumbnailSrc: "/phone-fix.png",
-      videoSrc: "/phone-fix.mp4",
+      thumbnailSrc: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981015/phone-fix.png",
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791981026/phone-fix.mp4",
       problem:
         "Getting a phone repaired in Nigeria is unnecessarily stressful. Customers have to locate a trusted engineer, travel to a physical shop, wait for hours, and still have no guarantee of quality or safety. On the other side, skilled phone engineers sit in fixed locations with limited customer reach, and dispatch riders have no structured way to connect their services to repair workflows. Three groups that needed each other had no single place to find each other.",
       solution:

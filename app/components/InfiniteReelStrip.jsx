@@ -11,17 +11,17 @@ export default function InfiniteReelStrip() {
 
   // Media items for the reel
   const mediaItems = [
-    { type: "video", src: "/bcc-landscape video-mockup.mp4", label: "BCC Platform" },
-    { type: "image", src: "/phone-fix.png", label: "PhoneFix Home" },
-    { type: "image", src: "/ghonsi-home-mockup.png", label: "Ghonsi Home" },
-    { type: "video", src: "/bcc-nav-video1-mockup.mp4", label: "BCC Navigation" },
-    { type: "image", src: "/bcc-projects.png", label: "BCC Projects" },
-    { type: "video", src: "/ghonsi-landscape video.mp4", label: "Ghonsi Proof" },
-    { type: "video", src: "/bcc-nav-video2-mockup.mp4", label: "BCC Features" },
-    { type: "image", src: "/bcc-about-mockup.png", label: "BCC About" },
-    { type: "image", src: "/ghonsi-about-mockup.png", label: "Ghonsi About" },
-    { type: "image", src: "/bcc-mobile-view-mockup.png", label: "BCC Mobile" },
-    { type: "image", src: "/bcc-footer.png", label: "BCC Footer" },
+    { type: "video", src: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980997/bcc-landscape-video-mockup.mp4", label: "BCC Platform" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981015/phone-fix.png", label: "PhoneFix Home" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980995/ghonsi-home-mockup.png", label: "Ghonsi Home" },
+    { type: "video", src: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980978/bcc-nav-video1-mockup.mp4", label: "BCC Navigation" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980965/bcc-projects.png", label: "BCC Projects" },
+    { type: "video", src: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980995/ghonsi-landscape-video.mp4", label: "Ghonsi Proof" },
+    { type: "video", src: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980997/bcc-nav-video2-mockup.mp4", label: "BCC Features" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981000/bcc-about-mockup.png", label: "BCC About" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980965/ghonsi-about-mockup.png", label: "Ghonsi About" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980964/bcc-mobile-view-mockup.png", label: "BCC Mobile" },
+    { type: "image", src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980985/bcc-footer.png", label: "BCC Footer" },
   ];
 
   useEffect(() => {

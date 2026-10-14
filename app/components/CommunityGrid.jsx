@@ -6,28 +6,28 @@ export default function CommunityGrid() {
   const communityMoments = [
     {
       type: "image",
-      src: "/profile-image.png",
+      src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981014/profile-image.png",
       alt: "Speaking at Crypto Bootcamp",
       label: "Crypto Bootcamp",
       rotation: -8,
     },
     {
       type: "image",
-      src: "/ghonsi-home-mockup.png",
+      src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980995/ghonsi-home-mockup.png",
       alt: "FiL Lagos 2024",
       label: "FiL Lagos 2024",
       rotation: 5,
     },
     {
       type: "image",
-      src: "/bcc-home.png",
+      src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980983/bcc-home.png",
       alt: "Stellar Network Event",
       label: "Stellar Network",
       rotation: -3,
     },
     {
       type: "image",
-      src: "/ghonsi-about-mockup.png",
+      src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980965/ghonsi-about-mockup.png",
       alt: "Hedera Africa Hackathon",
       label: "Hedera Hackathon",
       rotation: 7,

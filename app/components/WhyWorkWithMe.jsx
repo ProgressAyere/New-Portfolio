@@ -13,17 +13,17 @@ export default function WhyWorkWithMe() {
     {
       title: "Fast Delivery",
       description: "Ship production-ready code in days, not weeks",
-      videoSrc: "/bcc-nav-video1-mockup.mp4",
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980978/bcc-nav-video1-mockup.mp4",
     },
     {
       title: "Clean Maintainable Code",
       description: "Code that your team can actually understand and extend",
-      videoSrc: "/bcc-nav-video2-mockup.mp4",
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980997/bcc-nav-video2-mockup.mp4",
     },
     {
       title: "Pixel-Perfect Execution",
       description: "Every interaction feels intentional, every detail matters",
-      videoSrc: "/ghonsi-landscape video.mp4",
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980995/ghonsi-landscape-video.mp4",
     },
   ];
 

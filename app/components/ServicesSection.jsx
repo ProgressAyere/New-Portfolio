@@ -32,7 +32,7 @@ export default function ServicesSection() {
       id: "interactive",
       title: "Interactive Web Experiences",
       description: "Animations and interactions that make users stop scrolling",
-      videoSrc: "/pcc-video.mp4", 
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791981036/pcc-video.mp4", 
       scope: [
         "Custom scroll-triggered animations",
         "Micro-interactions and hover states",
@@ -55,7 +55,7 @@ export default function ServicesSection() {
       id: "landing",
       title: "High-Converting Landing Pages",
       description: "Pages that load fast, look premium, and drive conversions",
-      videoSrc: "/bcc-landscape-video-mockup.mp4", // Replace with landing page demo
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980997/bcc-landscape-video-mockup.mp4",
       scope: [
         "Mobile-first responsive design",
         "Conversion-optimized layouts",
@@ -78,7 +78,7 @@ export default function ServicesSection() {
       id: "web3",
       title: "Web3 Frontend Builds",
       description: "Onchain interfaces that feel as smooth as Web2",
-      videoSrc: "/ghonsi-landscape video.mp4", // Replace with Web3 dashboard demo
+      videoSrc: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980995/ghonsi-landscape-video.mp4",
       scope: [
         "Wallet connection flows",
         "Smart contract interaction UI",

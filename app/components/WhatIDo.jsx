@@ -100,7 +100,7 @@ export default function WhatIDo() {
         "I help modern startups build interactive web experiences that convert visitors into believers.",
       media: {
         type: "video",
-        src: "/bcc-nav-video1-mockup.mp4",
+        src: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980978/bcc-nav-video1-mockup.mp4",
       },
       gradient: "from-violet-500/20 to-purple-500/20",
       link: "https://bcc-yct.vercel.app",
@@ -112,7 +112,7 @@ export default function WhatIDo() {
         "I help Web3 founders build onchain interfaces that make complex protocols feel effortless.",
       media: {
         type: "image",
-        src: "/ghonsi-home-mockup.png",
+        src: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980995/ghonsi-home-mockup.png",
       },
       gradient: "from-emerald-500/20 to-teal-500/20",
       link: "https://ghonsiproof.com",
@@ -124,7 +124,7 @@ export default function WhatIDo() {
         "I help product teams build motion design systems that make every interaction feel intentional.",
       media: {
         type: "video",
-        src: "/bcc-nav-video2-mockup.mp4",
+        src: "https://res.cloudinary.com/zwnns6ok/video/upload/v1791980997/bcc-nav-video2-mockup.mp4",
       },
       gradient: "from-blue-500/20 to-cyan-500/20",
       link: "https://bcc-yct.vercel.app/community",

@@ -10,28 +10,28 @@ export default function TestimonialsCarousel() {
 
   const testimonials = [
     {
-      avatar: "/prosper-ayere.png",
+      avatar: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981021/prosper-ayere.png",
       name: "Prosper Ayere",
       role: "CEO of Ghonsi Proof",
       quote:
         "I am really glad to have progress join my team in executing his tasks as one of our Frontend devs. He delivers great work, has a good working ethic and collaborates with other key players in the team.",
     },
     {
-      avatar: "/eunice-apetu.jpeg",
+      avatar: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791980972/eunice-apetu.jpg",
       name: "Eunice Apetu",
       role: "Co-founder & Communications Lead at BCC",
       quote:
         "Progress is a developer that doesn't just code, he knows what he does, he makes sure to do thorough research before going into anything, he is very zealous about his work, making sure everything is smooth and running. So far, one thing I'm very sure of is; Progress is the man for the job.",
     },
     {
-      avatar: "/preslyn-ayere.jpeg",
+      avatar: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981016/preslyn-ayere.jpg",
       name: "Preslyn Ayere",
       role: "CEO of PCC",
       quote:
         "At PCC, we hold everything we commission to the same standard as our buildings: precision, intentionality, and craft. Progress delivered exactly that. From the first view, the interface felt architectural, deliberate, purposeful & hierarchy guiding the eye like a well-designed floor plan.",
     },
     {
-      avatar: "/osaboh-nie.jpg",
+      avatar: "https://res.cloudinary.com/zwnns6ok/image/upload/v1791981008/osaboh-nie.jpg",
       name: "Osaboh Nie",
       role: "Ui/Ux Designer",
       quote:
