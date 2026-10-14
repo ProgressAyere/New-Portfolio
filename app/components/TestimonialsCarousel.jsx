@@ -4,8 +4,9 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue } from "framer-motion";
 
 export default function TestimonialsCarousel() {
-  const constraintsRef = useRef(null);
+  const containerRef = useRef(null);
   const [dragStarted, setDragStarted] = useState(false);
+  const [dragConstraints, setDragConstraints] = useState({ left: 0, right: 0 });
   const x = useMotionValue(0);
 
   const testimonials = [
@@ -38,6 +39,28 @@ export default function TestimonialsCarousel() {
         "Working with Progress Ayere has been one of the smoothest creative collaborations I've experienced. His designs are consistently high quality, thoughtful, polished, and always on point with the brief. If you're looking for a frontend designer who delivers great work and is genuinely great to work with; Progress Ayere is absolutely the one",
     },
   ];
+
+  // Calculate drag constraints based on content width
+  useEffect(() => {
+    const calculateConstraints = () => {
+      if (containerRef.current) {
+        const container = containerRef.current;
+        const containerWidth = container.offsetWidth;
+        const contentWidth = container.scrollWidth;
+        const maxDrag = contentWidth - containerWidth;
+        
+        setDragConstraints({
+          left: -maxDrag,
+          right: 0,
+        });
+      }
+    };
+
+    calculateConstraints();
+    window.addEventListener('resize', calculateConstraints);
+    
+    return () => window.removeEventListener('resize', calculateConstraints);
+  }, []);
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
@@ -84,15 +107,20 @@ export default function TestimonialsCarousel() {
       </motion.div>
 
       {/* Carousel container */}
-      <div ref={constraintsRef} className="relative">
+      <div className="relative overflow-hidden">
         <motion.div
+          ref={containerRef}
           drag="x"
-          dragConstraints={constraintsRef}
-          dragElastic={0.1}
+          dragConstraints={dragConstraints}
+          dragElastic={0.05}
           dragMomentum={true}
+          dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
           onDragStart={() => setDragStarted(true)}
+          onDragEnd={() => {
+            setTimeout(() => setDragStarted(false), 1000);
+          }}
           style={{ x }}
-          className="flex gap-6 cursor-grab active:cursor-grabbing px-6 md:px-12"
+          className="flex gap-6 cursor-grab active:cursor-grabbing px-6 md:px-12 select-none"
         >
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -110,7 +138,7 @@ export default function TestimonialsCarousel() {
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover pointer-events-none"
                   />
                 </div>
                 <div>
