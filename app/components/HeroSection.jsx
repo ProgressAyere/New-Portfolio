@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Scramble } from "./Scramble";
 
 export default function HeroSection() {
   const headline = "I Build Fast, Interactive & Conversion-Focused Web Experiences.";
@@ -129,8 +130,8 @@ export default function HeroSection() {
             <p className="text-lg md:text-xl text-slate-400" style={{ fontFamily: 'SF Mono, Monaco, Consolas, monospace' }}>
               Hi, my name is
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white whitespace-nowrap">
-              Progress Ayere.
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+              <Scramble text="Progress Ayere." className="text-white" />
             </h2>
           </motion.div>
 
