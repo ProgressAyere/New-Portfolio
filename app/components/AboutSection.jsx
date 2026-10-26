@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useLayoutEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import { gsap } from "../lib/gsap";
+import { gsap, ScrollTrigger } from "../lib/gsap";
 import {
   SiHtml5,
   SiJavascript,
@@ -16,6 +16,126 @@ import {
   SiSolidity,
   SiMysql,
 } from "react-icons/si";
+
+/**
+ * Scroll-scrubbed letter-by-letter highlight (Codrops "Text Highlight Effects" style).
+ * Each letter starts WHITE and, as the paragraph scrolls through the viewport, a wave
+ * passes through the characters and each letter's color changes to the paragraph's
+ * emerald -> cyan -> teal gradient. Only color changes; letters never move or scale.
+ *
+ * The gradient is painted per-letter but sized to the whole paragraph, so the final
+ * result looks identical to the old single gradient. A white layer on top of the
+ * gradient is faded out via the --w CSS variable (1 = white, 0 = gradient).
+ */
+const GRADIENT =
+  "linear-gradient(to right, #00d492, #00d3f3, #00d5be)"; // emerald-400 -> cyan-400 -> teal-400
+
+function HighlightParagraph({ text, index, variants }) {
+  const pRef = useRef(null);
+
+  // Keep the gradient continuous across letters (re-measure on resize / font load)
+  useLayoutEffect(() => {
+    const p = pRef.current;
+    if (!p) return;
+
+    const measure = () => {
+      const pRect = p.getBoundingClientRect();
+      p.querySelectorAll("[data-char]").forEach((c) => {
+        const x = c.getBoundingClientRect().left - pRect.left;
+        c.style.backgroundSize = `100% 100%, ${pRect.width}px 100%`;
+        c.style.backgroundPosition = `0 0, ${-x}px 0`;
+      });
+    };
+
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(p);
+    if (document.fonts?.ready) document.fonts.ready.then(measure);
+    return () => ro.disconnect();
+  }, [text]);
+
+  // Scroll-scrubbed animation
+  useEffect(() => {
+    const p = pRef.current;
+    if (!p) return;
+    const chars = p.querySelectorAll("[data-char]");
+    if (!chars.length) return;
+
+    // Respect reduced motion: just show the final gradient
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      gsap.set(chars, { "--w": 0 });
+      return;
+    }
+
+    const ctx = gsap.context(() => {
+      const total = chars.length;
+      const dur = 0.35; // lifetime of one letter's animation (fraction of timeline)
+      const step = (1 - dur) / total; // stagger between letters
+
+      const tl = gsap.timeline({
+        defaults: { ease: "none" },
+        scrollTrigger: {
+          trigger: p,
+          start: "top 88%",
+          end: "bottom 50%",
+          scrub: 0.6,
+        },
+      });
+
+      // white -> gradient
+      tl.fromTo(
+        chars,
+        { "--w": 1 },
+        { "--w": 0, duration: dur, stagger: step },
+        0
+      );
+    }, p);
+
+    // Make sure trigger positions are right once layout settles
+    const t = setTimeout(() => ScrollTrigger.refresh(), 300);
+
+    return () => {
+      clearTimeout(t);
+      ctx.revert();
+    };
+  }, [text]);
+
+  const words = text.split(" ");
+
+  return (
+    <motion.p
+      ref={pRef}
+      custom={index}
+      variants={variants}
+      aria-label={text}
+      className="relative text-lg md:text-xl leading-relaxed"
+    >
+      {words.map((word, wi) => (
+        <span key={wi} aria-hidden="true">
+          <span className="inline-block whitespace-nowrap">
+            {word.split("").map((ch, ci) => (
+              <span
+                key={ci}
+                data-char
+                style={{
+                  "--w": 1,
+                  color: "transparent",
+                  backgroundImage: `linear-gradient(rgba(255,255,255,var(--w)), rgba(255,255,255,var(--w))), ${GRADIENT}`,
+                  backgroundRepeat: "no-repeat",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                }}
+              >
+                {ch}
+              </span>
+            ))}
+          </span>
+          {wi < words.length - 1 ? " " : null}
+        </span>
+      ))}
+    </motion.p>
+  );
+}
 
 export default function AboutSection() {
   const photoRef = useRef(null);
@@ -197,14 +317,12 @@ export default function AboutSection() {
             className="space-y-4 mb-12"
           >
             {bioLines.map((line, i) => (
-              <motion.p
+              <HighlightParagraph
                 key={i}
-                custom={i}
+                text={line}
+                index={i}
                 variants={bioLineVariants}
-                className="text-lg md:text-xl leading-relaxed bg-gradient-to-r from-emerald-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent"
-              >
-                {line}
-              </motion.p>
+              />
             ))}
           </motion.div>
 
